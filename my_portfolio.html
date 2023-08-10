@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .bod {
+            background-color: rgb(15 23 42);
+            width: 100%;
+            height: 60px;
+        }
+
+        .nav1 {
+            cursor: pointer;
+            height: 6px;
+            width: 55px;
+            margin: 9px;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+        .nav2 {
+            cursor: pointer;
+            height: 6px;
+            width: 55px;
+            margin: 9px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+        .nav3 {
+            cursor: pointer;
+            height: 6px;
+            width: 55px;
+            margin: 9px;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+        .wrapper {
+            cursor: pointer;
+            margin-left: 4px;
+            width: 65px;
+            height: 36px;
+        }
+
+        .wrapper:hover .nav2 {
+            width: 30px;
+        }
+
+        #navvalue {
+            width: 100%;
+            margin-left: 40%;
+            margin-top: -50px;
+        }
+
+        #navvalue li {
+            color: black;
+            list-style: none;
+            display: inline-block;
+            background: #0ef;
+            padding: 13px 35px;
+            margin: 10;
+            border: black;
+            border-width: 5px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 50px rgb(41, 32, 172);
+
+        }
+
+        #navvalue li:hover {
+            background-color: rgb(41, 32, 172);
+            color: white;
+        }
+
+        #head {
+            width: 31%;
+            margin-left: 7%;
+            margin-right: 50%;
+            margin-top: -40px;
+            color: white;
+            padding: 13px 35px;
+            margin: 10;
+            border: black;
+            border-width: 5px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .project {
+            background-color: rgb(15 23 42);
+            width: 92%;
+            height: 486px;
+            margin-top: 2%;
+            position: relative;
+            font-weight: bold;
+            padding: 63px;
+            border-radius: 20px;
+        }
+
+        .project1 {
+            background-color: aquamarine;
+            height: 200px;
+            width: 282px;
+            margin: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 9px;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgb(32, 170, 172);
+
+        }
+
+        .project2 {
+            background-color: white;
+            height: 200px;
+            width: 282px;
+            margin: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 9px;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgb(32, 170, 172);
+        }
+
+        .project3 {
+            background-color: white;
+            height: 200px;
+            width: 282px;
+            margin: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 9px;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgb(32, 170, 172);
+        }
+
+        .project4 {
+            background-color: white;
+            height: 200px;
+            width: 282px;
+            margin: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 9px;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgb(32, 170, 172);
+        }
+
+        .project1:hover {
+
+            background-color: #0ef;
+        }
+
+        .project2:hover {
+
+            background-color: #0ef;
+        }
+
+        .project3:hover {
+
+            background-color: #0ef;
+        }
+
+        .project4:hover {
+
+            background-color: #0ef;
+        }
+
+        .prohead {
+            margin: 9px;
+            color: black;
+            font-weight: bold;
+        }
+
+        #proimg {
+            width: 268px;
+            height: 123px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        .text-animation {
+            color: greenyellow;
+            font-weight: bold;
+            margin: 14px 0 13px -45px;
+            height: 30px;
+            padding: 0px;
+            display: inline-block;
+            width: 10%;
+            border-color: red;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid rgb(204, 20, 20);
+            animation: typing 2s steps(40) forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 45%;
+                color: #0ef;
+                border-color: #080808;
+                box-shadow: 0 0 50px rgb(19, 85, 113);
+            }
+        }
+
+
+        #search {
+            background-color: white;
+            height: 40px;
+            margin-left: 10px;
+            border: 5px;
+            color: black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input[type="search"] {
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bod">
+        <hr>
+        <div class="wrapper">
+            <div class="nav1"></div>
+            <div class="nav2"></div>
+            <div class="nav3"></div>
+
+        </div>
+        <h2 id="head">SANTOSH's PORTFOLIO</h2>
+        <ul id="navvalue">
+            <li>Home</li>
+            <li>Projects</li>
+            <li>Resume</li>
+            <li>Linkedin</li>
+            <input id="search" type="search" placeholder="search"></input>
+        </ul>
+    </div>
+    <div class="project">
+        <div class="text-animation">I AM LEARNING WEB DEVELOPEMENT</div><br>
+        <div class="text-animation">I AM A STUDENT OF COMPUTER PROGRAMMING</div>
+        <h2 style="color:white">PROJECTS</h2>
+        <a href="index.html" target="_blank">
+            <div class="project1">
+                <h3 class="prohead">PROJECT-1:MESS PAYMENT FORM</h3> <img id="proimg" src="mess.png">
+            </div>
+        </a>
+        <div class="project2">
+            <h3 class="prohead">PROJECT-1:MESS PAYMENT FORM</h3> <img id="proimg" src="BG.jpg">
+        </div>
+        <div class="project3">
+            <h3 class="prohead">PROJECT-1:MESS PAYMENT FORM</h3> <img id="proimg" src="BG.jpg">
+        </div>
+        <div class="project4">
+            <h3 class="prohead">PROJECT-1:MESS PAYMENT FORM</h3> <img id="proimg" src="BG.jpg">
+        </div>
+    </div>
+
+</body>
+
+</html>
