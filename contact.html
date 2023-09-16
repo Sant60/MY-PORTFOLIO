@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <title>Contact us</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color:black;
+        background-repeat: repeat-y;
+       height:100%;
+
+      }
+    .all{
+    display:flex;
+    flex-direction: row;
+    }
+      h2 {
+        color: white;
+        text-align: center;
+      }
+
+      .c1 {
+        width: 50%;
+        height: 500px;
+        background-color: transparent;
+        margin: 160px 0 40px 27px;
+        border: 5px solid white;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+
+      }
+
+      .c2 {
+        width: 45%;
+        height: 500px;
+        margin-bottom: 30%;
+        margin-left: 1%;
+        margin-top: 83px;
+        border: 5px solid white;
+        border-radius: 20px;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+      }
+      #contactForm {
+        height: 72%;
+        margin: 20px 0 20px 10px;
+        padding: 20px;
+        font-weight: bold;
+      }
+
+      #name {
+        margin-left: 36px;
+      }
+
+      #email {
+        margin-left: 70px;
+      }
+
+      #phone {
+        margin-left: 64px;
+      }
+
+      #message {
+        margin-left: 122px;
+        border-radius: 5px;
+      }
+
+      input[type="name"]
+        input[type="text"]
+        input[type="tel"]
+        input
+        [type="message"] {
+        font-style: white;
+        background: transparent;
+      }
+
+      #csub {
+        margin-left: 150px;
+        height: 40px;
+        width: 90px;
+        color: white;
+        background-color: rgb(80, 27, 27);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      #csub:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 50px rgb(255, 236, 22);
+        border: 1px solid white;
+      }
+
+      label {
+        color: white;
+      }
+
+      #contacthead {
+        color: black;
+        text-align: center;
+        height: 70px;
+        font-weight: 20px;
+        background: transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      #ch {
+        font-size: 65 px;
+        padding-top: 10px;
+        background-color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      hr {
+        margin: 10px 0 0 121px;
+        height: 5px;
+        width: 346px;
+
+        background-color: white;
+      }
+
+      .input {
+        color: white;
+        background: transparent;
+        width: 345px;
+        height: 31px;
+        margin: 0 0 0 10px;
+        border-top-right-radius: 20px;
+        border-top: 10px;
+        border-left: 0;
+        border-right: 0;
+        outline: none;
+      }
+
+      #message {
+        background: transparent;
+        color: white;
+        padding-left: 5px;
+      }
+
+      #ch2 {
+        text-align: center;
+      }
+
+      .chead {
+        background-color: white;
+        height: 40px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+      }
+
+      .icon {
+        margin: 102px 0 0 75px;
+        color: white;
+        display: inline-block;
+        margin-left: 100px;
+      }
+
+      h3 {
+        margin: -20px 0 0 76px;
+      }
+
+      .cbutton {
+        height: 40px;
+        width: 90px;
+        color: rgb(0, 0, 0);
+        /* background-color: rgb(80, 27, 27); */
+        border-radius: 5px;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+
+      .cbutton:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 50px rgb(255, 236, 22);
+        border: 1px solid white;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        color: white;
+      }
+      /* #chome{
+        height: 20px;
+        width:50px;
+        color:white;
+        background-color: red;
+        } */
+
+      .text-animation {
+        color: greenyellow;
+        font-weight: bold;
+        margin: 14px 0 13px 5px;
+        height: 30px;
+        padding: 0px;
+        display: inline-block;
+        width: 10%;
+        border-color: red;
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid rgb(204, 20, 20);
+        animation: typing 2s steps(40) infinite alternate;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 45%;
+          color: rgb(200, 184, 217);
+          border-right: 2px solid transparent;
+          text-shadow: 0 0 5px rgb(31, 23, 86);
+        }
+      }
+      .navigationMenu {
+    height: 88px;
+    width: 100%;
+    position:sticky;
+    top:0;
+    display: inline-block;
+    background-color: rgb(54, 2, 50);
+}
+#head {
+    color: white;
+    display: flex;
+    cursor: pointer;
+    margin: 36px 0 0 130px;
+}
+#navvalue {
+    width: 100%;
+    margin-left: 40%;
+    margin-top: -33px;
+}
+
+#navvalue li {
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin:  -55px 13px 0 0px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 15px;
+    border-radius:5px;
+
+}
+
+#navvalue li:hover {
+    color: rgb(253, 250, 253);
+    border:1px solid white;
+}
+#search {
+    background: transparent;
+    height: 38px;
+    width: 249px;
+    margin-left: 16px;
+    color: white;
+    padding-left: 10px;
+    font-size: 21px;
+    align-items: center;
+    border-top: 10px;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+}
+
+input[type="search"] {
+    margin-left: 2px;
+    font-family: sans-serif;
+    text-align: left;
+}
+#btns {
+    width: 39px;
+    height: 41px;
+    border: 0px solid blue;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#btns:hover {
+    background-color: black;
+    color: white;
+}
+#back{
+    color:white;
+    margin-left:50px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: rgb(42, 9, 32);
+    position: fixed;
+    top: 68px;
+    left: -250px;
+    z-index: 2;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+#profile {
+    width: 58px;
+    border-radius: 50px;
+    padding-right: 64px;
+}
+
+.nav-item {
+    border-radius: 10px;
+    width: 83px;
+    display: block;
+    padding: 26px 82px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bold;
+    list-style:none;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 50px rgb(14, 14, 15);
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 27px;
+    top: 32px;
+    left: 10px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.menu-toggle:hover {
+    border: 1px solid white;
+    background-color: #6e4ba3;
+    border-radius:10px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menu-toggle.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+#proimg {
+    width: 120px;
+    border-radius: 50%;
+    margin: 63px 0 2px 58px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+#proimg:hover {
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.footer{
+  color:white;
+  background-color:black;
+  height:100px;
+  width:100%;
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <ul class="sidemenu">
+          <a href="#" class="nav-item">
+              <li>Home</li>
+          </a>
+          <a href="#" class="nav-item">
+              <li>About</li>
+          </a>
+          <a href="#" class="nav-item">
+              <li>Services</li>
+          </a>
+          <a href="contact.html" class="nav-item">
+              <li>Contact us</li>
+          </a>
+          <img id="proimg" src="profile.jpg" alt="profileimg">
+          
+      </ul></div>
+    <div class="navigationMenu">
+      <div class="navigationMenu">
+        <div class="menu-toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <h2 id="head">SANTOSH's PORTFOLIO</h2>
+    <ul id="navvalue">
+        <a href="my_portfolio.html">
+            <li>Home</li>
+        </a>
+        <a href="https://github.com/Sant60" target="_blank">
+            <li>Projects</li>
+        </a>
+        <a href="resume.pdf" target="_blank">
+            <li>Resume</li>
+        </a>
+        <a href="https://www.linkedin.com/in/santhosh8978kumar/" target="_blank">
+            <li>Linkedin</li>
+        </a>
+        <input id="search" type="search" placeholder="search"></input>
+        <button id="btns" value="search"><i class="fa fa-search"></i></button>
+    </ul>
+</div>
+   
+    <div class="all">
+      <div class="c1">
+        <div id="contacthead">
+          <h1 id="ch">Please Give your Details</h1>
+        </div>
+        <form action="contact.php" id="contactForm" method="POST">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="enter your full name"
+            class="input"
+            name="name"
+            required
+          /><br /><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="enter your email"
+            class="input"
+            name="email"
+            required
+          /><br /><br />
+
+          <label for="phone">Phone:</label>
+          <input
+            type="number"
+            id="phone"
+            class="input"
+            placeholder="enter your phone no"
+            name="phone"
+            required
+          /><br /><br />
+
+          <label for="message">Feedback:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="input message"
+            padding="20px"
+            rows="4"
+            cols="50"
+            required
+          ></textarea
+          ><br /><br />
+
+          <input type="submit" id="csub" value="Submit" />
+        </form>
+      </div>
+      <div class="c2">
+        <div class="chead">
+          <h2 id="ch2">Contact us</h2>
+          <div class="icon">
+            <i class="fa-solid fa-envelope"> </i
+            ><label for="email"> Email : </label>
+            <h3>fakebadge440@gmail.com</h3>
+            <br />
+
+            <i class="fa-solid fa-phone"></i>
+            <label for="phone"> phone : </label>
+            <h3>6392607419</h3>
+            <br />
+           
+            <label for="facebook"> <i class="fa-brands fa-facebook"></i></label>
+            <a href="https://www.facebook.com/profile.php?id=100042594843792"
+              ><button class="cbutton">facebook</button></a><br><br>
+            
+            <label for="github"><i class="fa-brands fa-square-github"></i> </label>
+            <a href="https://github.com/Sant60"
+              ><button class="cbutton">Github</button></a>
+            <br><br>
+            
+            <label for="linkedin"><i class="fa-brands fa-linkedin"></i></label>
+            <a href="https://www.linkedin.com/in/santhosh8978kumar/"
+              ><button class="cbutton">Linkedin</button></a
+            >
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+<br><br><br><br><br><br><br><br><br><br>
+  <div class="footer">
+  <ul class="footbar">
+    <lh id="lhead">services</lh>
+<li class="footeritem">web application development</li>
+<li class="footeritem">app management and development</li>
+<li class="footeritem">system design and machine learning</li>
+<li class="footeritem">UI and UX design</li>
+<li></li>
+  </ul>
+  </div>
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>
