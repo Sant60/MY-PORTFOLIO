@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "poppins" sans-serif;
+      }
+      
+      body {
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #fffb00,
+          #5eff00,
+          #ff5100,
+          #00f7ff,
+          #f700e2
+        );
+        font-family: Arial, sans-serif;
+        background-size: 900% 200%;
+        height: 100%;
+        animation: animate 20s linear infinite;
+        background-repeat: repeat-y;
+        background-position: static;
+      }
+      @keyframes animate {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      
+      .navigationMenu {
+        height: 75px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: inline-block;
+        background-color: rgb(54, 2, 50);
+      }
+      
+      .sidebar {
+        width: 250px;
+        height: 100%;
+        background-color: rgb(42, 9, 32);
+        position: fixed;
+        top: 68px;
+        left: -250px;
+        z-index: 2;
+        transition: left 0.3s ease;
+      }
+      
+      .sidebar.active {
+        left: 0;
+      }
+      
+      .content {
+        margin-left: 260px;
+        padding: 20px;
+      }
+      
+      #profile {
+        width: 58px;
+        border-radius: 50px;
+        padding-right: 64px;
+      }
+      
+      .nav-item {
+        border-radius: 10px;
+        width: 83px;
+        display: block;
+        padding: 26px 82px;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      .nav-item:hover {
+        border: 1px solid white;
+        box-shadow: 0 0 50px rgb(14, 14, 15);
+      }
+      
+      .menu-toggle {
+        position: relative;
+        width: 27px;
+        top: 32px;
+        left: 10px;
+        cursor: pointer;
+        padding: 3px;
+        border: 1px solid white;
+        background-color: #000000;
+      }
+      
+      .line {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: transform 0.3s ease;
+      }
+      
+      .menu-toggle.active .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+      }
+      
+      .menu-toggle.active .line:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .menu-toggle.active .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+      }
+      
+      #navvalue {
+        width: 100%;
+        margin-left: 40%;
+        margin-top: -38px;
+      }
+      
+      #navvalue li {
+        color: white;
+        list-style: none;
+        display: inline-block;
+        margin: -55px 13px 0 0px;
+        height: 40px;
+        width: 100px;
+        border-width: 5px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 15px;
+      }
+      
+      #navvalue li:hover {
+        color: white;
+        box-shadow: 0 0 50px black;
+        border: 1px solid white;
+      }
+      
+      .sidemenu {
+        list-style: none;
+        margin-top: 20px;
+      }
+      
+      #proimg {
+        width: 120px;
+        border-radius: 50%;
+        margin: 63px 0 2px 58px;
+        cursor: pointer;
+        border: 2px solid black;
+      }
+      
+      #proimg:hover {
+        border: 2px solid rgb(255, 255, 255);
+        box-shadow: 0 0 50px rgb(138, 138, 138);
+      }
+      
+      #head {
+        color: white;
+        display: flex;
+        cursor: pointer;
+        margin: 0 0 0 130px;
+      }
+      .prohead {
+        margin: 9px;
+        color: black;
+        font-weight: bold;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      
+      #search {
+        background: transparent;
+        height: 38px;
+        width: 249px;
+        margin-left: 16px;
+        color: white;
+        padding-left: 10px;
+        font-size: 21px;
+        align-items: center;
+        border-top: 10px;
+        border-left: 0;
+        border-right: 0;
+        outline: none;
+      }
+      
+      input[type="search"] {
+        margin-left: 2px;
+        font-family: sans-serif;
+        text-align: left;
+      }
+      
+      .pro {
+        display: block;
+      }
+      #wimg {
+        margin: 50px;
+        margin-top: 10%;
+        width: 700px;
+      }
+      #cologo {
+        width: 40vw;
+        height: 50vh;
+        margin-bottom: 20%;
+      }
+      #btns {
+        width: 39px;
+        height: 41px;
+        border: 0px solid blue;
+        border-radius: 8px;
+        background-color: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 0px;
+      }
+      
+      #btns:hover {
+        background-color: black;
+        color: white;
+      }
+      
+      .searchBar {
+        width: 172px;
+        align-items: center;
+      }
+      
+      .footer {
+        height: 4px;
+        width: 101%;
+        background-color: white;
+      }
+      
+      .wrapper {
+        display: flex;
+        background-color: black;
+        padding-left: 35%;
+        height: 69px;
+        width: 100%;
+        position: fixed;
+        margin-top: 75px;
+      }
+      .wrapper .first-text {
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        padding-top: 27px;
+      }
+      .wrapper .sec-text {
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+        color: #0ef;
+      }
+      .sec-text li {
+        position: relative;
+        top: 0;
+        font-size: 30px;
+        color: #0ef;
+        list-style: none;
+        padding: 0 20px;
+        text-shadow: 0 0 10px #0ef;
+        animation: slide 12s steps(4) infinite, colorful 6s infinite;
+      }
+      @keyframes slide {
+        100% {
+          top: -360px;
+        }
+      }
+      @keyframes colorful {
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      .sec-text li span {
+        position: relative;
+      }
+      .sec-text li span::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        width: 600px;
+        height: 69px;
+        background: black;
+        border-left: 3px solid rgb(247, 9, 9);
+        animation: typing 1.5s steps(20) infinite alternate;
+      }
+      @keyframes typing {
+        100% {
+          left: 100%;
+          margin: 0 -35px 0 35px;
+        }
+      }
+      .all {
+        display: flex;
+      }
+      .c1 {
+        width: 50%;
+        height: 500px;
+        background-color: transparent;
+        margin: 160px 0 40px 27px;
+        border: 5px solid white;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        position: absolute;
+      }
+      
+      .c2 {
+        width: 45%;
+        height: 500px;
+        margin-bottom: 30%;
+        margin-left: 53%;
+        margin-top: 83px;
+        border: 5px solid white;
+        border-radius: 20px;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+        position: absolute;
+      }
+      
+      #contactForm {
+        height: 72%;
+        margin: 20px 0 20px 10px;
+        padding: 20px;
+        font-weight: bold;
+      }
+      
+      #name {
+        margin-left: 36px;
+      }
+      
+      #email {
+        margin-left: 70px;
+      }
+      
+      #phone {
+        margin-left: 64px;
+      }
+      
+      #message {
+        margin-left: 122px;
+        border-radius: 5px;
+      }
+      
+      input[type="name"] input[type="text"] input[type="tel"] input [type="message"] {
+        font-style: white;
+        background: transparent;
+      }
+      
+      #csub {
+        margin-left: 150px;
+        height: 40px;
+        width: 90px;
+        color: white;
+        background-color: rgb(80, 27, 27);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      #csub:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 50px rgb(255, 236, 22);
+        border: 1px solid white;
+      }
+      
+      label {
+        color: white;
+      }
+      
+      #contacthead {
+        color: black;
+        text-align: center;
+        height: 70px;
+        font-weight: 20px;
+        background: transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      
+      #ch {
+        font-size: 65 px;
+        padding-top: 10px;
+        background-color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      
+      hr {
+        margin: 10px 0 0 121px;
+        height: 5px;
+        width: 346px;
+      
+        background-color: white;
+      }
+      
+      .input {
+        color: white;
+        background: transparent;
+        width: 345px;
+        height: 31px;
+        margin: 0 0 0 10px;
+        border-top-right-radius: 20px;
+        border-top: 10px;
+        border-left: 0;
+        border-right: 0;
+        outline: none;
+      }
+      
+      #message {
+        background: transparent;
+        color: white;
+        padding-left: 5px;
+      }
+      
+      #ch2 {
+        text-align: center;
+      }
+      
+      .chead {
+        background-color: white;
+        height: 40px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+      }
+      
+      .icon {
+        margin: 102px 0 0 75px;
+        color: white;
+        display: inline-block;
+        margin-left: 100px;
+      }
+      
+      h3 {
+        margin: -20px 0 0 76px;
+      }
+      
+      .cbutton {
+        height: 40px;
+        width: 90px;
+        color: white;
+        background-color: rgb(80, 27, 27);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .cbutton:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 50px rgb(255, 236, 22);
+        border: 1px solid white;
+      }
+      
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      
+      a:hover {
+        color: white;
+      }
+      </style>
+    <title>MY PORTFOLIO</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="sidemenu">
+            <a href="#" class="nav-item">
+                <li>Home</li>
+            </a>
+            <a href="#" class="nav-item">
+                <li>About</li>
+            </a>
+            <a href="#" class="nav-item">
+                <li>Services</li>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <li>Contact us</li>
+            </a>
+            <img id="proimg" src="profile.jpg" alt="profileimg">
+        </ul>
+    </div>
+    <div class="navigationMenu">
+        <div class="menu-toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <h2 id="head">SANTOSH's PORTFOLIO</h2>
+        <ul id="navvalue">
+            <a href="my_portfolio.html">
+                <li>Home</li>
+            </a>
+            <a href="https://github.com/Sant60" target="_blank">
+                <li>Projects</li>
+            </a>
+            <a href="resume.pdf" target="_blank">
+                <li>Resume</li>
+            </a>
+            <a href="https://www.linkedin.com/in/santhosh8978kumar/" target="_blank">
+                <li>Linkedin</li>
+            </a>
+            <input id="search" type="search" placeholder="search"></input>
+            <button id="btns" value="search"><i class="fa fa-search"></i></button>
+        </ul>
+    </div>
+        <div class="wrapper">
+            <span class="first-text">I'm learning</span>
+            <ul class="sec-text">
+            <li><span>Data Structure</span></li>
+            <li><span>Web development</span></li> 
+            <li><span>Programming</span></li>
+            <li><span>Coding</span></li>
+        </ul>
+        </div>
+        <div class="img">
+        <img src="cologo.png"id="cologo" alt="img">
+    <img id="wimg" src="wimg.png" alt="coderimg">
+</div>    
+    <div class="content">
+        <!-- Your main content goes here -->
+    </div>
+    <script>
+     const sidebar = document.querySelector('.sidebar');
+const menuToggle = document.querySelector('.menu-toggle');
+menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); sidebar.classList.toggle('active'); });
+
+document.body.addEventListener('click', (customEvent) => {
+  // Check if the click was outside the hamburger menu and close the menu if it's open
+  if (!sidebar.contains(customEvent.target) && !menuToggle.contains(customEvent.target)) {
+    sidebar.classList.remove('active'); menuToggle.classList.remove('active');
+  }
+});
+
+    </script>
+</body>
+</html>
